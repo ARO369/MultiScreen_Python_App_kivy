@@ -1,0 +1,356 @@
+WindowManager:
+    HomePage:
+    Page1:
+    Page2:
+    Page3:
+    Page4:
+    Page5:
+    NavigationPage:
+    ThanksPage:
+<Page1>:
+    MainWidget:
+
+<MainWidget>:
+<HomePage>:
+    name: "Home"
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        Label:
+            markup: True
+            text:"          WELCOME TO KINDLE\nhave a great reading experience"
+            font_name: "Jokerman"
+            color:'#00FFCE'
+            font_size: 40
+        Button:
+            markup: True
+            text:"START"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':0}
+            font_size: 50
+            color:"black"
+            background_color:"#ffd700"
+            background_normal:""
+            on_release:
+                app.root.current = "Page1"
+                root.manager.transition.direction = "left"
+
+<MainWidget>:
+<Page1>:
+    name: "Page1"
+    orientation: "vertical"
+    spacing: 50
+    space_x: self.size[0]/3
+    size: root.width, root.height
+    FloatLayout:
+        orientation:'vertical'
+        padding:100
+        spacing:30
+
+        Label:
+
+            markup: True
+            text:"QUOTES-      [color=#FFFFFF]You have the power to shape your own destiny.\n                        And on the one-in-one thousand, \n                        no, one in a million chance something to happen to go wrong[/color]\n\n                                                                                                -Might Guy"
+            font_name: "Jokerman"
+            color:'#00FFCE'
+            font_size: 21
+            pos_hint:{'center_x':.5, 'center_y':.6}
+
+    BoxLayout:
+        Button:
+            markup: True
+            cols:2
+            text:"BACK"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':.1}
+            font_size: 50
+            color:"#7fffd4"
+            background_color:"#000000"
+            background_normal:""
+            on_release:
+                app.root.current = "Home"
+                root.manager.transition.direction = "right"
+
+        Button:
+            markup: True
+            cols:2
+            text: "Next"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':.1}
+            font_size: 50
+            color: "#000000"
+            background_color: "#7fffd4"
+            background_normal: ""
+            on_release:
+                app.root.current = "Page2"
+                root.manager.transition.direction = "left"
+
+
+<MainWidget>:
+<Page2>:
+    name: "Page2"
+    orientation: "vertical"
+    spacing: 50
+    space_x: self.size[0]/3
+    size: root.width, root.height
+    FloatLayout:
+        orientation:'vertical'
+        padding:100
+        spacing:30
+
+        Label:
+            markup: True
+            text:"Dictionary:-\n[color=#FFFFFF]perseverance[/color]  meaning-\n\n noun: perseverance \n[color=#FFFFFF]continued  effort  to  do  or  achieve  something  despite  difficulties,\n failure,  or  opposition :  the  action\nor  condition  or  an  instance  of  persevering  :  steadfastness.[/color] "
+            font_name: "Stencil"
+            color:'#00FFCE'
+            font_size: 20
+            pos_hint:{'center_x':.5, 'center_y':.7}
+
+    BoxLayout:
+        Button:
+            markup: True
+            text:"BACK"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':.1}
+            font_size: 50
+            color:"#7fffd4"
+            background_color:"#000000"
+            background_normal:""
+            on_release:
+                app.root.current = "Page1"
+                root.manager.transition.direction = "right"
+
+        Button:
+            markup: True
+            cols: 2
+            text: "Next"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':.1}
+            font_size: 50
+            color: "#000000"
+            background_color: "#7fffd4"
+            background_normal: ""
+            on_release:
+                app.root.current = "Page3"
+                root.manager.transition.direction = "left"
+
+
+<MainWidget>:
+<Page3>:
+    name: "Page3"
+    orientation: "vertical"
+    spacing: 50
+    space_x: self.size[0]/3
+    size: root.width, root.height
+    FloatLayout:
+        orientation:'vertical'
+        padding:100
+        spacing:30
+
+        Image:
+            source:'myimg/img1.jpg'
+            allow_stretch: True
+
+    BoxLayout:
+        Button:
+            markup: True
+            text:"BACK"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':.1}
+            font_size: 50
+            color:"#7fffd4"
+            background_color:"#000000"
+            background_normal:""
+            on_release:
+                app.root.current = "Page2"
+                root.manager.transition.direction = "right"
+
+        Button:
+            markup: True
+            cols: 2
+            text: "Next"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':.1}
+            font_size: 50
+            color: "#000000"
+            background_color: "#7fffd4"
+            background_normal: ""
+            on_release:
+                app.root.current = "Page4"
+                root.manager.transition.direction = "left"
+
+
+<MainWidget>:
+<Page4>:
+    name: "Page4"
+    orientation: "vertical"
+    spacing: 50
+    space_x: self.size[0]/3
+    size: root.width, root.height
+    FloatLayout:
+        orientation:'vertical'
+        padding:100
+        spacing:30
+
+        Image:
+            source:'myimg/img2.jpg'
+            allow_stretch: True
+
+    BoxLayout:
+        Button:
+            markup: True
+            text:"BACK"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':.1}
+            font_size: 50
+            color:"#7fffd4"
+            background_color:"#000000"
+            background_normal:""
+            on_release:
+                app.root.current = "Page3"
+                root.manager.transition.direction = "right"
+
+        Button:
+            markup: True
+            cols: 2
+            text: "Next"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':.1}
+            font_size: 50
+            color: "#000000"
+            background_color: "#7fffd4"
+            background_normal: ""
+            on_release:
+                app.root.current = "Page5"
+                root.manager.transition.direction = "left"
+
+
+<Tester>:
+<MainWidget>:
+<Page5>:
+    name: "Page5"
+    orientation: "vertical"
+    spacing: 50
+    space_x: self.size[0]/3
+    canvas.before:
+        Color:
+            rgba: (0, 0, 0, 0)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    FloatLayout:
+        orientation:'vertical'
+        padding:100
+        spacing:30
+        Label:
+            markup: True
+            text:"[color=#FFFFFF]We are song[/color], One Piece\nsong by [color=#FFFFFF]Hiroshi Kitadani[/color], composed by [color=#FFFFFF]Kohei Tanaka[/color] with lyrics by [color=#FFFFFF]Shoko Fujibayashi[/color]. \nIt was used as the [color=#FFFFFF]first opening[/color] theme for the One Piece television anime,\n accompanying most of the episodes comprising the [color=#FFFFFF]East Blue Saga.[/color]"
+            pos_hint :{'center_x':0.5, 'center_y':0.8}
+            font_name: "Jokerman"
+            color:'#00FFCE'
+            font_size:17
+
+        Button:
+            markup: True
+            size_hint:0.6, 0.1
+            pos_hint :{'center_x':0.5, 'center_y':0.5}
+            text:'PLAY'
+            font_name: "Jokerman"
+            font_size: 50
+            color: "#111111"
+            bold:True
+            background_color: "#7fffd4"
+            background_normal:""
+            on_release: root.play_sound()
+
+    BoxLayout:
+        Button:
+            markup: True
+            text:"BACK"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':.1}
+            font_size: 50
+            color:"#7fffd4"
+            background_color:"#000000"
+            background_normal:""
+            on_release:
+                app.root.current = "Page4"
+                root.manager.transition.direction = "right"
+
+        Button:
+            markup: True
+            cols: 2
+            text: "Next"
+            font_name: "Jokerman"
+            size_hint: (.5, .25)
+            pos_hint:{'center_x':.5, 'center_y':.1}
+            font_size: 50
+            color: "#000000"
+            background_color: "#7fffd4"
+            background_normal: ""
+            on_release:
+                app.root.current = "Nav"
+                root.manager.transition.direction = "left"
+
+
+<MainWidget>:
+<NavigationPage>:
+    name: "Nav"
+    orientation: "vertical"
+    spacing: 50
+    space_x: self.size[0]/3
+    size: root.width, root.height
+    FloatLayout:
+        orientation:'vertical'
+        padding:100
+        spacing:30
+
+    BoxLayout:
+        Button:
+            markup: True
+            text:"Read again"
+            font_name: "Jokerman"
+            font_size: 50
+            color: "#000000"
+            background_color: "#7fffd4"
+            background_normal:""
+            on_release:
+                app.root.current = "Home"
+                root.manager.transition.direction = "right"
+
+
+        Button:
+            markup: True
+            text:"Quit"
+            font_name: "Jokerman"
+            font_size: 50
+            color:"black"
+            background_color:"#FFFF00"
+            background_normal:""
+            on_release:
+                app.root.current = "Thanks"
+                root.manager.transition.direction = "down"
+
+<MainWidget>:
+<ThanksPage>:
+    name: "Thanks"
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        Label:
+            markup: True
+            text:"Thanks for Watching"
+            font_name: "Jokerman"
+            color:"yellow"
+            font_size: 32
