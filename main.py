@@ -23,7 +23,7 @@ class Page4(Screen):
 
 class Page5(Screen):
     def play_sound(self):
-        sound = SoundLoader.load('song.wav')
+        sound = SoundLoader.load('song.mp3')
         if sound:
             sound.play()
 
